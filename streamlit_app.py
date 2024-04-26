@@ -13,7 +13,7 @@ background-size: cover;
 }
 
 [data-testid="stSidebar"]{
-background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrxU5Yl_kSv2XOdN9Inv4p56eB-PEoXrUEpwHM6P5q5qwhVdK3hSlOyr7vRMCF1bUYh30_x5uJ0T3_Hs1HfCH3RZcqZXFQH3NDXXO4lguX8f1Wpb6KmAr_8t02aXiVSXmYkjmxI_E9Sz6PK2aP1zwqzxmMbH6X-SlKEG7yopBJE9RbEkTEKaPj7fibqat0/s1600/R%20(1).jpeg");
+background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEibBG6rvIOR6WyB7AD80ZLCp381xG5K6c4gpKrIbZwrsRTIXDTaUZHHhjlwazCdSWoQjwta_yt5v1dNrqUwnCt81RqcDIib9t-MqLCQ2vqZ1aVO33IXfI2OQ2dfohqMhsul9AoI3LCKemUg9DwiOjfeqtaZ6BZ4aFs2pXCmxpJx6MysilW4aNdCGdYyhfy_/s204/Screenshot%202024-04-26%20162431.png");
 background-size: center;
 }
 </style>
