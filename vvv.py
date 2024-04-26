@@ -61,23 +61,64 @@ def main():
             # Retry asking the chatbot in case of errors
             bot_response = retry_request(lambda: ask_chatbot(user_query))
 
-            # Extracting budget information from bot response
-            budget = None
-            if bot_response:
-                budget_keywords = ["budget", "cost", "price"]
-                for keyword in budget_keywords:
-                    if keyword in bot_response.lower():
-                        budget_index = bot_response.lower().index(keyword)
-                        budget_text = bot_response[budget_index:]
-                        budget_text = budget_text.split(" ", 1)[1]  # Remove the keyword
-                        budget = budget_text.split()[0]  # Extract the budget amount
-                        break
+            if bot_response is not None:
+                st.success("Chatbot: {}".format(bot_response))
+
+if __name__ == "__main__":
+    main()
+    
+
+
+
+# Function to format chatbot response into human-readable text
+def format_chatbot_response(response):
+    try:
+        if response and hasattr(response, 'result') and hasattr(response.result, 'candidates'):
+            candidates = response.result.candidates
+            if candidates:
+                formatted_response = ""
+                for i, candidate in enumerate(candidates):
+                    destination_info = candidate.content.parts[0].text
+                    budget_info = f"Budget: ${1000 + i * 500} - ${1500 + i * 500}"  # Adjust budget based on destination position
+                    formatted_response += f"{i + 1}. {destination_info}\n{budget_info}\n\n"
+                return formatted_response
+            else:
+                return "The chatbot did not provide any response."
+        else:
+            return "No response from the chatbot."
+    except Exception as e:
+        st.error("An error occurred while formatting chatbot response: {}".format(str(e)))
+        return None
+
+def main():
+    global model  # Access the global model variable
+    st.title("Tourism Chatbot")
+
+    # List available models
+    try:
+        models = genai.list_models()
+        model_names = [model.name for model in models]
+
+        # Select the model
+        selected_model = st.sidebar.selectbox("Select Model", model_names)
+
+        # Initialize the selected model
+        model = genai.GenerativeModel(selected_model)
+
+    except Exception as e:
+        st.error("An error occurred while initializing the model: {}".format(str(e)))
+        return
+
+    st.header("Ask me anything about your destination:")
+    user_query = st.text_input("You:")
+
+    if st.button("Ask"):
+        if user_query:
+            # Retry asking the chatbot in case of errors
+            bot_response = retry_request(lambda: ask_chatbot(user_query))
 
             if bot_response is not None:
-                if budget:
-                    st.success("Chatbot: {} (Budget: {})".format(bot_response, budget))
-                else:
-                    st.success("Chatbot: {}".format(bot_response))
+                st.success("Chatbot Response:\n{}".format(bot_response))
 
 if __name__ == "__main__":
     main()
