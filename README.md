@@ -17,7 +17,7 @@ To run the application, follow these steps:
 
 2. Set up access to the Google Generative AI API by setting the environment variable `GOOGLE_API_KEY` with your API key.
 
-3. Run the application by executing the Python script `tourism_chatbot.py`.
+3. Run the application by executing the Python script `vvv.py`.
 
 ## Usage
 
