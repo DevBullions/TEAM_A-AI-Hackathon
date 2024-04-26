@@ -8,8 +8,13 @@ import time
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"]{
-background-image: url("https://as1.ftcdn.net/v2/jpg/04/69/56/98/1000_F_469569884_DIHBFqOry74CqFonLFyPCDa8T9hwvYDe.jpg");
+background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCZ27eLOBB8MUm_1FpJUlT0JpRB-rzVHkTM1KlVimGd3Lfi2CjobmidNN3kKC_I767wh7X1aawIlCdf-59zxfEh8APdmSGiPobbEV0_Dl-JfT82AO9ihol9FxU_COxmsEhZT5nmJHwN3v2V3D7H3wZtwEB6rQ-EkL3jtZrOussnVW0fElk3lAqCzJQxCB1/s1071/20240426-152237.png");
 background-size: cover;
+}
+
+[data-testid="stSidebar"]{
+background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrxU5Yl_kSv2XOdN9Inv4p56eB-PEoXrUEpwHM6P5q5qwhVdK3hSlOyr7vRMCF1bUYh30_x5uJ0T3_Hs1HfCH3RZcqZXFQH3NDXXO4lguX8f1Wpb6KmAr_8t02aXiVSXmYkjmxI_E9Sz6PK2aP1zwqzxmMbH6X-SlKEG7yopBJE9RbEkTEKaPj7fibqat0/s1600/R%20(1).jpeg");
+background-size: center;
 }
 </style>
 '''
