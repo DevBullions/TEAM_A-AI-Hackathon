@@ -77,10 +77,10 @@ def main():
     global model  # Access the global model variable 
 
     html='''
-    <title style="color:white">Welcome To The</title><title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
+    <p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Welcome To The</p> <p style="color:green; font-family: Arial, sans-serif; font-size: 24px;">Future</p><p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Of</p><p style="color:blue; font-family: Arial, sans-serif; font-size: 24px;">Tourism</p>
     '''
+
     st.markdown(html, unsafe_allow_html=True)
-    
     # List available models
     try:
         models = genai.list_models()
@@ -97,9 +97,9 @@ def main():
         return
     
     html='''
-    <p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Welcome To The</p> <p style="color:green; font-family: Arial, sans-serif; font-size: 24px;">Future</p><p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Of</p><p style="color:blue; font-family: Arial, sans-serif; font-size: 24px;">Tourism</p>
+    <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure/p>
+    <head style="color:white">Ask me anything about your destination</head>
     '''
-
     st.markdown(html, unsafe_allow_html=True)
     user_query = st.text_input("You:")
 
