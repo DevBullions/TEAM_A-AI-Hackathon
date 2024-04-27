@@ -76,10 +76,14 @@ def retry_request(func, max_retries=3, delay=1):
 def main():
     global model  # Access the global model variable 
 
-    html='''
-    <p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Welcome To The</p> <p style="color:green; font-family: Arial, sans-serif; font-size: 24px;">Future</p><p style="color:white; font-family: Arial, sans-serif; font-size: 24px;">Of</p><p style="color:blue; font-family: Arial, sans-serif; font-size: 24px;">Tourism</p>
+    html = '''
+    <title style="color:white; font-family: Arial, sans-serif; font-size: 24px;">
+    Welcome To The 
+    <span style="color:green;">Future</span>
+    <span style="color:white;">Of</span>
+    <span style="color:blue;">Tourism</span>
+    </title>
     '''
-
     st.markdown(html, unsafe_allow_html=True)
     # List available models
     try:
