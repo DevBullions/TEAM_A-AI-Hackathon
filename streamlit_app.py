@@ -76,9 +76,14 @@ def retry_request(func, max_retries=3, delay=1):
 
 def main():
     global model  # Access the global model variable 
-    
-    st.title("Welcome To The :green[Future] Of :blue[Tourism]")
+ 
+html='''
+<title style="color:white">Welcome To The</title> <title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
 
+'''
+
+st.markdown(html, unsafe_allow_html=True)
+    
     # List available models
     try:
         models = genai.list_models()
@@ -86,16 +91,19 @@ def main():
 
         # Select the model
         selected_model = st.sidebar.selectbox("Select Model", model_names)
-
+        
         # Initialize the selected model
         model = genai.GenerativeModel(selected_model)
 
     except Exception as e:
         st.error("An error occurred while initializing the model: {}".format(str(e)))
         return
+    html='''
+    <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure/p>
+    <head style="color:white">Ask me anything about your destination</head>
+    '''
 
-    st.text("Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure")
-    st.header("Ask me anything about your destination :sunglasses::")
+    st.markdown(html, unsafe_allow_html=True)
     user_query = st.text_input("You:")
 
     if st.button("Ask"):
