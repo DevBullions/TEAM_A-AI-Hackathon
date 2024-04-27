@@ -20,7 +20,6 @@ background-size: cover;
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
 # Configure access to the Gemini app
 os.environ['GOOGLE_API_KEY'] = 'AIzaSyDUt0Hw-mVUVzy_LRXIrOoTnay61eYDgEI'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
@@ -76,13 +75,12 @@ def retry_request(func, max_retries=3, delay=1):
 
 def main():
     global model  # Access the global model variable 
- 
-html='''
-<title style="color:white">Welcome To The</title> <title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
 
-'''
+    html='''
+    <title style="color:white">Welcome To The</title> <title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
 
-st.markdown(html, unsafe_allow_html=True)
+    '''
+    st.markdown(html, unsafe_allow_html=True)
     
     # List available models
     try:
@@ -98,6 +96,7 @@ st.markdown(html, unsafe_allow_html=True)
     except Exception as e:
         st.error("An error occurred while initializing the model: {}".format(str(e)))
         return
+    
     html='''
     <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure/p>
     <head style="color:white">Ask me anything about your destination</head>
