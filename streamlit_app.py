@@ -107,9 +107,8 @@ def main():
     st.markdown(html, unsafe_allow_html=True)
     user_query = st.text_input("You:")
 
-    if st.button("Ask", help="Click to ask your question", 
+    if st.button("Ask", 
              format_func=lambda _: '<span style="color:white; font-weight:bold;">Ask</span>',
-             help_tooltip="Click to ask your question",
              key="ask_button",
              style="height: 40px; width: 150px; background-color: blue; color: white;"):
         if user_query:
