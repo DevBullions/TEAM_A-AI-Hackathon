@@ -54,7 +54,9 @@ def ask_chatbot(query):
     global model  # Access the global model variable
     try:
         # Send query to Google Generative AI API
+        print("Querying chatbot with:", query)  # Debug statement
         response = model.generate_content(query)
+        print("Chatbot response:", response)  # Debug statement
         return response.text  # Return the text content of the response
     except Exception as e:
         st.error("An error occurred while querying the chatbot: {}".format(str(e)))
