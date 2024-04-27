@@ -77,8 +77,7 @@ def main():
     global model  # Access the global model variable 
 
     html='''
-    <title style="color:white">Welcome To The</title> <title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
-
+    <title style="color:white">Welcome To The</title> 
     '''
     st.markdown(html, unsafe_allow_html=True)
     
@@ -98,7 +97,7 @@ def main():
         return
     
     html='''
-    <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure/p>
+    <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure</p>
     <head style="color:white">Ask me anything about your destination</head>
     '''
 
