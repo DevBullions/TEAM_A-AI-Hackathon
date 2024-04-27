@@ -21,7 +21,7 @@ background-size: cover;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Configure access to the Gemini app
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyDUt0Hw-mVUVzy_LRXIrOoTnay61eYDgEI'
+os.environ['GOOGLE_API_KEY'] = 'AIzaSyD4OT0cgOFFg3Tvymj6lVyYBEKSEVV4Wto'
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # Define the model variable at the global scope
