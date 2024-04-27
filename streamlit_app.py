@@ -107,7 +107,7 @@ def main():
     st.markdown(html, unsafe_allow_html=True)
     user_query = st.text_input("You:")
 
-    if st.button("Ask", key="ask_button", style="height: 40px; width: 150px; color: white; background-color: blue;"):
+    if st.button("Ask", style="height: 40px; width: 150px; color: white; background-color: blue;"):
         if user_query:
             # Retry asking the chatbot in case of errors
             chatbot_response = retry_request(lambda: ask_chatbot(user_query))
