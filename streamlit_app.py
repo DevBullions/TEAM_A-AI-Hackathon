@@ -102,7 +102,7 @@ def main():
     
     html='''
     <p style="color:white">Where connvenince meets exploration. Lets our chatbot be your trusted companion \n as you embark on  your next adventure </p>
-    <head style="color:white">Ask me anything about your destination</head>
+    <p style="color:white">Ask me anything about your destination 😎 </p>
     '''
     st.markdown(html, unsafe_allow_html=True)
     user_query = st.text_input("You:")
