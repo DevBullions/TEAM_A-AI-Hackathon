@@ -77,7 +77,7 @@ def main():
     global model  # Access the global model variable 
 
     html='''
-    <title style="color:white">Welcome To The</title> title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
+    <title style="color:white">Welcome To The</title><title style="color:green">Future</title><title style="color:white">Of</title><title style="color:blue">Tourism</title>
     '''
     st.markdown(html, unsafe_allow_html=True)
     
